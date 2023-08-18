@@ -8,7 +8,7 @@ forma_pagamento = str(input("""
 
 if produto>=100 and forma_pagamento=="DIN":
     desconto = produto - (produto*0.1)
-    print(f"\nVocê teve desconto!! O valor da compra ficou: R$ {desconto}")
+    print(f"\nVocê teve desconto!! O valor da compra ficou: R$ {desconto:.2f}")
 
 elif forma_pagamento=="CA":
     funcao = str(input("""
@@ -18,20 +18,24 @@ elif forma_pagamento=="CA":
         Qual o tipo do cartão? """)).upper()
     
     if funcao=="D":
-        print(f"\nSua compra ficou R$ {produto}")
+        print(f"\nSua compra ficou R$ {produto:.2f}")
 
     else:
         parcelas = int(input("\nVocê pode parcelar em até 3 parcelas.\nQuantas vai querer? "))
         if parcelas==1:
-            print(f"\nSua compra ficou R$ {produto}")
+            print(f"\nSua compra ficou R$ {produto:.2f}")
         elif parcelas==2:
             produto_parcelado = produto/2
-            print(f"\nSua compra ficou R$ {produto} com 2 parcelas de R$ {produto_parcelado}")
+            print(f"\nSua compra ficou R$ {produto:.2f} com 2 parcelas de R$ {produto_parcelado:.2f}")
         elif parcelas==3:
             produto_parcelado = produto/3
-            print(f"\nSua compra ficou R$ {produto} com 2 parcelas de R$ {produto_parcelado}")
+            print(f"\nSua compra ficou R$ {produto:.2f} com 2 parcelas de R$ {produto_parcelado:.2f}")
         else:
             print("\nQuantidades de parcelas inválida!")
+
+elif forma_pagamento=="CH":
+    print(f"\nSua compra ficou R$ {produto:.2f}")
+
 else:
-    print(f"\nSua compra ficou R$ {produto}")
+    print("Forma de pagamento Inválida")
     
