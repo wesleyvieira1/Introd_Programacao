@@ -10,9 +10,9 @@ if produto>=100 and forma_pagamento=="DIN":
     desconto = produto - (produto*0.1)
     print(f"\nVocê teve desconto!! O valor da compra ficou: R$ {desconto}")
 
-elif forma_pagamento=="CH":
-    print(f"\nSua compra ficou R$ {produto}")
-
-else:
+elif forma_pagamento!="DIN" and forma_pagamento!="CH":
     print("\nForma de pagamento Inválido")
+    
+else:
+    print(f"\nSua compra ficou R$ {produto}")
     
