@@ -10,6 +10,9 @@ if produto>=100 and forma_pagamento=="DIN":
     desconto = produto - (produto*0.1)
     print(f"\nVocê teve desconto!! O valor da compra ficou: R$ {desconto:.2f}")
 
+elif produto<100 and forma_pagamento=="DIN":
+    print(f"\nSua compra ficou R$ {produto:.2f}")
+
 elif forma_pagamento=="CA":
     funcao = str(input("""
                             
