@@ -2,7 +2,7 @@ nota_um = float(input("Digite a primeira nota: "))
 nota_dois = float(input("Digite a segunda nota: "))
 
 media = (nota_um+nota_dois)/2
-print(media)
+#print(media)
 
 if 9.0 <= media <= 10.0:
     conceito = "A"
