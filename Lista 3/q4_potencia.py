@@ -1,10 +1,15 @@
-base = int(input("Digite um valor para base: "))
-expoente = int(input("Digite um valor para o expoente: "))
+soma = base = int(input("Digite o valor da base: "))
+expoente = int(input("Digite o valor do expoente: "))
 
+resultado = 1
 
+if expoente < 0:
+    expoente = -(expoente)
+    for i in range(expoente):
+            resultado *= soma
+    print(f"{base} elevado a {expoente} = {1/resultado}")
+else:
+    for i in range(expoente):
+        resultado *= soma
 
-for i in range(1, expoente+1):
-    potencia = i * expoente
-
-print(f"{base} elevado a {expoente} é {potencia}")
-
+    print(f"{base} elevado a {expoente} = {resultado}")
